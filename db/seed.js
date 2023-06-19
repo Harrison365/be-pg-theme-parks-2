@@ -46,28 +46,20 @@ OR
 
 function createParks() {
   /* Create your parks table in the query below */
-  return db
-    .query(
-      `CREATE TABLE parks (
+  return db.query(
+    `CREATE TABLE parks (
     park_id SERIAL PRIMARY KEY, park_name VARCHAR NOT NULL, year_opened INT NOT NULL, annual_attendance INT NOT NULL);
     `
-    )
-    .then((result) => {
-      console.log(result);
-    });
+  );
 }
 
 function createRides() {
   /* Create your parks table in the query below */
-  return db
-    .query(
-      `CREATE TABLE rides (
+  return db.query(
+    `CREATE TABLE rides (
     ride_id SERIAL PRIMARY KEY, park_id INT REFERENCES parks(park_id), ride_name VARCHAR(50) NOT NULL, year_opened INT NOT NULL, votes INT NOT NULL)   
     `
-    )
-    .then((result) => {
-      console.log(result);
-    });
+  );
 }
 
 function insertParks(parks) {
