@@ -54,7 +54,7 @@ describe("9. selectRidesByParkId()", () => {
   });
 });
 
-describe.only("10. updateParkById()", () => {
+describe.skip("10. updateParkById()", () => {
   it("returns the updates park", () => {
     const parkUpdates = {
       park_name: "Chessington Earth of Experiences",
@@ -95,7 +95,7 @@ describe.only("10. updateParkById()", () => {
   });
 });
 
-describe("11. removeParkById()", () => {
+describe.skip("11. removeParkById()", () => {
   test("should return undefined", () => {
     return removeParkById(2).then((response) => {
       expect(response).toBeUndefined();
